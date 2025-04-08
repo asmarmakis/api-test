@@ -1,0 +1,71 @@
+### Get all tasks (with optional query parameters)
+GET http://localhost:3000/api/tasks?page=1&limit=10&status=pending&search=Node&sortBy=dueDate&sortOrder=DESC
+
+### Get all tasks (basic)
+GET http://localhost:3000/api/tasks
+
+### Get specific task by ID
+GET http://localhost:3000/api/tasks/1
+
+### Create new task with complete data
+POST http://localhost:3000/api/tasks
+Content-Type: application/json
+
+{
+    "title": "Belajar Node.js",
+    "description": "Mempelajari dasar-dasar Node.js dan Express",
+    "status": "pending",
+    "dueDate": "2024-03-20T00:00:00.000Z"
+}
+
+### Create new task with required field only
+POST http://localhost:3000/api/tasks
+Content-Type: application/json
+
+{
+    "title": "Membuat REST API"
+}
+
+### Create new task with specific status and due date
+POST http://localhost:3000/api/tasks
+Content-Type: application/json
+
+{
+    "title": "Implementasi Authentication",
+    "description": "Menambahkan sistem autentikasi menggunakan JWT",
+    "status": "pending",
+    "dueDate": "2024-03-25T00:00:00.000Z"
+}
+
+### Create new task for unit testing implementation
+POST http://localhost:3000/api/tasks
+Content-Type: application/json
+
+{
+    "title": "Membuat Unit Testing",
+    "description": "Implementasi unit testing menggunakan Jest untuk API endpoints",
+    "status": "in_progress",
+    "dueDate": "2024-03-30T00:00:00.000Z"
+}
+
+### Update task with complete data (PUT)
+PUT http://localhost:3000/api/tasks/1
+Content-Type: application/json
+
+{
+    "title": "Update Implementasi Testing",
+    "description": "Menambahkan test cases untuk semua endpoints API",
+    "status": "completed",
+    "dueDate": "2024-04-05T00:00:00.000Z"
+}
+
+### Delete task by ID
+DELETE http://localhost:3000/api/tasks/1
+Content-Type: application/json
+
+{
+    "title": "Update Implementasi Testing",
+    "description": "Menambahkan test cases untuk semua endpoints API",
+    "status": "completed",
+    "dueDate": "2024-04-05T00:00:00.000Z"
+}
